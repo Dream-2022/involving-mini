@@ -49,12 +49,12 @@ Page({
       success (res) {
         console.log(res.data.data)
         console.log(res.header)
-        console.log(res.header['Accesstoken'])
-        console.log(res.header['Refreshtoken'])
+        console.log(res.header['accessToken'])
+        console.log(res.header['refreshToken'])
         var userInfo=[]
         userInfo=res.data.data
-        userInfo.shortToken=res.header['Accesstoken']
-        userInfo.refreshToken=res.header['Refreshtoken']
+        userInfo.shortToken=res.header['accessToken']
+        userInfo.refreshToken=res.header['refreshToken']
         console.log(userInfo)
         wx.showToast({
           title: "登录成功", // 提示的内容
@@ -66,15 +66,6 @@ Page({
         wx.reLaunch({
           url: '/pages/mainPage/mainPage',
         })
-        // wx.switchTab({
-        //   url: '/pages/mainPage/mainPage',
-        //   success:function(res){
-        //     console.log(res)
-        //   },
-        //   fail:function(error){
-        //     console.log(error)
-        //   }
-        // })
         wx.setStorage({
           key: "userInfo",
           data: JSON.stringify(userInfo)
@@ -86,16 +77,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    console.log(this.data.user)
-    var that = this;
     wx.getStorage({
       key: "userInfo",
       success(res) {
-        that.data.user=JSON.parse(res.data)
-        console.log(that.data.user)
+        console.log(res.data)
+        if(res.data!=null){
+          console.log(res.data)
+          wx.reLaunch({
+            url: '/pages/mainPage/mainPage',
+          })
+        }
       }
     })
-    console.log(this.data.user)
   },
 
   /**

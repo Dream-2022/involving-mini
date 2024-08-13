@@ -1,4 +1,4 @@
-const baseUrl = 'https://your-api-domain.com'; // 设置API的基础路径
+const baseUrl = 'https://192.168.50.32:10010'; // 设置API的基础路径
 
 const request = (url, method, data, header = {}) => {
   return new Promise((resolve, reject) => {

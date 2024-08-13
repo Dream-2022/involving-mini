@@ -1,0 +1,214 @@
+/* pages/my/my.wxss */
+.myBigBox{
+  background-color: #f2f6fe;
+  padding: 10rpx 45rpx;
+}
+.myBoxTop{
+  padding: 20rpx 80rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+}
+.myBoxTopDetail1{
+  flex: 9;
+}
+.myBoxTopDetail2{
+  flex: 15;
+}
+.myBoxTopDetailName{
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}
+.myBoxTopDetailID{
+  font-size: 24rpx;
+}
+
+.myBoxRelateBottom{
+  height: 100%;
+}
+.myBoxBottom{
+  padding: 30rpx 35rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
+.myBoxBottomTitle1{
+  color: #476DF4;
+  margin-top: 10rpx;
+}
+.myBoxBottomTitle2{
+  color: #476DF4;
+  margin-top: 75rpx;
+  margin-bottom: 25rpx;
+}
+.exitbottom{
+  height: 80rpx;
+}
+.myAvatarBox,.myNameBox,.myEmailBox{
+  display: flex;
+  font-size: 30rpx;
+  padding: 10rpx 0;
+  line-height: 60rpx;
+}
+.myAvatarBox{
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  padding-bottom: 0;
+}
+.myBoxDetail1{
+  flex: 2;
+}
+.myBoxDetail2{
+  flex: 6;
+}
+.myBoxDetail3{
+  color: rgb(155, 152, 152);
+  flex: 1.5;
+}
+.myBoxRelates{
+  min-height: 160rpx;
+  margin-bottom: 300rpx;
+}
+.myBoxRelate{
+  font-size: 30rpx;
+  display: flex;
+  line-height: 50rpx;
+  cursor: pointer;
+  border-radius: 30rpx;
+  height: 80rpx;
+  padding-top: 20rpx;
+}
+.peopleListZi{
+  color: rgb(122, 122, 122);
+  font-size: 26rpx;
+  cursor: pointer;
+  padding: 10rpx 10rpx 10rpx 5rpx;
+  margin-top: 20rpx;
+  display: block;
+}
+.myBoxRelateUsername{
+  flex: 4;
+}
+.myBoxImage{
+  flex: 5;
+}
+.myBoxExitBox{
+  display: flex;
+  justify-content: center;
+}
+.myBoxExit{
+  color: #476DF4;
+  font-size: 26rpx;
+}
+.btn{
+  width:80px;
+  height:35px;
+  background:#44b549;
+  line-height:35px;
+  text-align:center;
+  color:#fff;
+  font-size:15px;
+  margin:20px auto;
+  border-radius:100px;
+}
+ 
+/* 遮罩层 */
+.mask{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#000;
+    z-index:9000;
+    opacity:0.5;
+}
+  
+/* 弹出层 */
+.modalDlg{
+    width:70%;
+    position:fixed;
+    top:50px;
+    left:0;
+    right:0;
+    z-index:9999;
+    margin:0 auto;
+    background-color:#fff;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+/* 弹出层里面的按钮 */
+.modalConfirm,.modalCancel{
+  width:80px;
+  height:60rpx;
+  background:#7990E0;
+  line-height:60rpx;
+  text-align:center;
+  color:#fff;
+  font-size:15px;
+  margin:20px auto;
+  border-radius:100px;
+}
+.modalCancel{
+  margin-left: 50rpx;
+}
+/* 弹出层里面的文字 */
+.text{
+  text-align:justify;
+  font-size:14px;
+  color:#666;
+  width:180px;
+  margin-top:10px;
+}
+.modalTitle{
+  margin-top: 100rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600;
+}
+.modalContain{
+  height: 80rpx;
+  width: 450rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+.modalEmailZi{
+  display: flex;
+  align-self:center;
+  justify-content: center;
+  flex: 1;
+}
+.modalEmail{
+  flex: 3;
+}
+.modalEmail{
+  width: 350rpx;
+}
+.modalCodeZi{
+  flex: 1;
+}
+.modalCode{
+  width: 200rpx;
+  flex: 2;
+}
+.modalCodeButton{
+  flex:1;
+  background-color: #7990E0;
+  color: #fff;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+  width: 100rpx;
+  display: flex;
+  align-self:center;
+  justify-content: center;
+}
+.modalBottom{
+  display: flex;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}

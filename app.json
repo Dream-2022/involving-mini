@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/mainPage/mainPage",
     "pages/login/login",
+    "pages/mainPage/mainPage",
     "pages/myPage/myPage",
     "pages/analysisPage/analysisPage",
+    "pages/moreTemplate/moreTemplate",
+    "pages/recentDetail/recentDetail",
     "pages/logs/logs"
   ],
   "tabBar": {
