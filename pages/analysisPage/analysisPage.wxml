@@ -1,0 +1,13 @@
+<!--pages/notice/notice.wxml-->
+<scroll-view>
+  <view style="height: 40rpx;"></view>
+  <view class="title">
+    消息
+  </view>
+
+  <view class="ul">
+    <view class="li">
+      dsff111111111111111111
+    </view>
+  </view>
+</scroll-view>

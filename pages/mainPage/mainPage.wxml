@@ -1,0 +1,85 @@
+<!--pages/main/main.wxml-->
+<view class="view">
+  <view class="mainBox">
+    <image style="width: 100%; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/img/mainPage.png'></image>
+    <view class="entranceBoxes">
+      <view class="entranceBox">
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/3-t.png'></image>
+        <view  class="entranceTitle">最近分析</view>
+      </view>
+      <view class="entranceBox">
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/private.png'></image>
+        <view  class="entranceTitle">我的分析</view>
+      </view>
+      <view class="entranceBox">
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/0-t.png'></image>
+        <view  class="entranceTitle">静态分析</view>
+      </view>
+      <view class="entranceBox">
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/book-search.png'></image>
+        <view  class="entranceTitle">黑白名单</view>
+      </view>
+      <view class="entranceBox">
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/2-t.png'></image>
+        <view  class="entranceTitle">我的会员</view>
+      </view>
+    </view>
+    <view class="quickBox">
+      <view class="quickTitleBox">
+        <view class="quickTitle">最近分析记录</view>
+        <view class="quickMore">更多 ></view>
+      </view>
+      <view class="quickContentBoxes">
+        <view class="quickContentBox">
+          <view class="quickTop">
+            <view class="quickTopName">87165</view>
+            <view class="quickTopType greenBox">安全</view>
+            <view class="quickTopAPKName">hyasdjf.apk</view>
+          </view>
+          <view class="quickBottom">
+            <view class="quickBottomProgress">
+              <van-progress
+                class="progressClass"
+                percentage="75"
+                pivot-color="#7232dd"
+                color="linear-gradient(to right, #be99ff, #7232dd)"/>
+            </view>
+            <view class="quickBottomTime">2022.5.1 10:22:1</view>
+          </view>
+        </view>
+        <view class="quickContentBox">
+          <view class="quickTop">
+            <view class="quickTopName">878514654165</view>
+            <view class="quickTopType greenBox">安全</view>
+            <view class="quickTopAPKName">hyasdjf.apk</view>
+          </view>
+          <view class="quickBottom">
+            <view class="quickBottomProgress">
+              <van-progress
+                class="progressClass"
+                percentage="75"
+                pivot-color="#7232dd"
+                color="linear-gradient(to right, #be99ff, #7232dd)"/>
+            </view>
+            <view class="quickBottomTime">2022.5.1 10:22:1</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="templateBox">
+        <view class="templateTitleBox">
+          <view class="templateTitle">范本库</view>
+          <view class="templateMore">更多 ></view>
+        </view>
+        <view class="templateContentBoxes">
+          <view class="templateContentBox">
+            <view>结合注意力与双线网络的Androiid恶意软件检测</view>
+            <view class="templateBottom">
+              <view class="templateBottomAuthor">秦海雪</view>
+              <view>2024-03-15</view>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>

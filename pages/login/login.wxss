@@ -1,0 +1,153 @@
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.container::before {
+  content: " ";
+  position: absolute;
+  width: 2000rpx;
+  height: 2000rpx;
+  border-radius: 50%;
+  background-image: linear-gradient(-45deg, #3A63F3 0%, #ebeffe 100%);
+  transition: 1.8s ease-in-out;
+  z-index: 6;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+}
+
+.container.sign-up-mode::before {
+  transform: translate(100%, -50%);
+}
+.container.sign-up-mode .form-warp {
+  left: 25%;
+}
+.container.sign-up-mode .sign-in-form {
+  opacity: 0;
+  z-index: 3;
+}
+.container.sign-up-mode .sign-up-form {
+  opacity: 1;
+  z-index: 4;
+}
+.containerBox{
+  height: 300rpx;
+}
+.flexBox1{
+  display: flex;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 20rpx;
+}
+.flexBox2{
+  display: flex;
+  margin-bottom: 40rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 20rpx;
+}
+.input:focus {
+  border: 1rpx red solid;
+}
+.loginPng {
+  width: 400rpx;
+}
+.formPng{
+  margin-top: 5rpx;
+  margin-left: 8rpx;
+  margin-right: 8rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.myinput{
+  margin-top: 8rpx;
+  width: 350rpx;
+}
+.loginButtonBox{
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginButton{
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #7990E0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200rpx;
+  border-radius: 20rpx;
+}
+/* 响应式 */
+@media screen and (max-width: 870px) {
+  .container::before {
+    width: 1500rpx;
+    height: 1500rpx;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+  .container.sign-up-mode::before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+  .form-warp {
+    width: 100%;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+  .container.sign-up-mode .form-warp {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .desc-warp {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  .desc-warp-item {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+  .sign-in-desc {
+    grid-row: 3 / 4;
+  }
+
+  .sign-in-desc imgae,
+  .sign-in-desc .content {
+    transform: translateY(800rpx);
+  }
+
+  .sign-up-mode .sign-in-desc image,
+  .sign-up-mode .sign-in-desc .content {
+    transform: translateY(0);
+  }
+
+  .sign-up-mode .sign-up-desc image,
+  .sign-up-mode .sign-up-desc .content {
+    transform: translateY(-800rpx);
+  }
+}
+
+@media screen and (max-width: 570rpx) {
+  .container::before {
+    bottom: 72%;
+    left: 50%;
+  }
+  img {
+    display: none;
+  }
+}

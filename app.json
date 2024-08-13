@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/mainPage/mainPage",
+    "pages/login/login",
+    "pages/myPage/myPage",
+    "pages/analysisPage/analysisPage",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#fff",
+    "backgroundColor": "#004ac5",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/mainPage/mainPage",
+        "text": "首页",
+        "iconPath": "/static/tabar/home.png",
+        "selectedIconPath": "/static/tabar/home-filling.png"
+      },
+      {
+        "pagePath": "pages/analysisPage/analysisPage",
+        "text": "分析记录",
+        "iconPath": "/static/tabar/chart.png",
+        "selectedIconPath": "/static/tabar/chart-fill.png"
+      },
+      {
+        "pagePath": "pages/myPage/myPage",
+        "text": "我的",
+        "iconPath": "/static/tabar/my.png",
+        "selectedIconPath": "/static/tabar/my_fill.png"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {},
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "GoodAn",
+    "navigationBarBackgroundColor": "#f2f6fe"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

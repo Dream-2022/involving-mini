@@ -1,0 +1,24 @@
+<!--pages/relationship/relationship.wxml-->
+<scroll-view>
+  <view style="height: 20rpx;"></view>
+  <text class="title">关系绑定</text>
+  <view class="box" wx:for="{{parentApplicationList}}" wx:key="item" data-index="{{index}}">
+    <view class="top">
+      <view class="left">
+        <image style="width: 160rpx;border-radius: 50%;" src='{{item.avatar ? item.avatar : "../../static/img/cat.jpeg"}}' mode="widthFix"/>
+      </view>
+      <view class="right">
+        <text class="id">
+          id：{{item.from}}
+        </text>
+        <text class="text">
+          {{item.name}}请求与你绑定家长关系
+        </text>
+      </view>
+    </view>
+    <view class="bottom">
+      <button bindtap="agreeButton">同意</button>
+      <button bindtap="rejectButton">拒绝</button>
+    </view>
+  </view>
+</scroll-view>

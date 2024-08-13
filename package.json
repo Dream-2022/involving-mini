@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@vant/weapp": "^1.11.6",
+    "axios": "^1.7.3",
+    "axios-miniprogram-adapter": "^0.3.5"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-spritesmith": "^0.0.2"
+  }
+}
