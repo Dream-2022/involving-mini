@@ -56,9 +56,10 @@
 }
 .quickTop,.quickBottom{
   display: flex;
+  flex-wrap: wrap;
 }
 .quickBottom{
-  margin-top: 10rpx;
+  margin-top: 5rpx;
 }
 .quickBottomProgress{
   margin-right: 80rpx;

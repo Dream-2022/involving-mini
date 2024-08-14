@@ -49,12 +49,10 @@ Page({
       success (res) {
         console.log(res.data.data)
         console.log(res.header)
-        console.log(res.header['accessToken'])
-        console.log(res.header['refreshToken'])
         var userInfo=[]
         userInfo=res.data.data
-        userInfo.shortToken=res.header['accessToken']
-        userInfo.refreshToken=res.header['refreshToken']
+        userInfo.shortToken=res.header['accessToken'] || res.header['Accesstoken']
+        userInfo.refreshToken=res.header['refreshToken'] || res.header['Refreshtoken']
         console.log(userInfo)
         wx.showToast({
           title: "登录成功", // 提示的内容

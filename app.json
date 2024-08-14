@@ -4,6 +4,7 @@
     "pages/mainPage/mainPage",
     "pages/myPage/myPage",
     "pages/analysisPage/analysisPage",
+    "pages/staticPage/staticPage",
     "pages/moreTemplate/moreTemplate",
     "pages/recentDetail/recentDetail",
     "pages/logs/logs"
@@ -22,9 +23,15 @@
       },
       {
         "pagePath": "pages/analysisPage/analysisPage",
-        "text": "分析记录",
+        "text": "最近分析",
         "iconPath": "/static/tabar/chart.png",
         "selectedIconPath": "/static/tabar/chart-fill.png"
+      },
+      {
+        "pagePath": "pages/staticPage/staticPage",
+        "text": "APK分析",
+        "iconPath": "/static/tabar/analysis.png",
+        "selectedIconPath": "/static/tabar/analysis-fill.png"
       },
       {
         "pagePath": "pages/myPage/myPage",

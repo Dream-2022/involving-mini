@@ -1,6 +1,64 @@
 // pages/myPage/myPage.js
+import * as echarts from '../../ec-canvas/echarts';
+function initChart(canvas, width, height, dpr) {
+  var detectionList=[]
+  wx.getStorage({
+    key:'detectionList',
+    success:(res)=>{
+      console.log(res.data)
+      detectionList=res.data
+    }
+  })
+  setTimeout(()=>{
+  },0)
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr // new
+  });
+  canvas.setChart(chart);
+  var option = {
+    legend: {
+      data: ['检测数量'],
+      top: 50,
+      left: 'center',
+      z: 100
+    },
+    grid: {
+      containLabel: true
+    },
+    tooltip: {
+      show: true,
+      trigger: 'axis'
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+      show: false
+    },
+    yAxis: {
+      x: 'center',
+      type: 'value',
+      splitLine: {
+        lineStyle: {
+          type: 'dashed'
+        }
+      }
+      // show: false
+    },
+    series: {
+      name: 'A',
+      type: 'line',
+      smooth: true,
+      data: [18, 36, 65, 30, 78, 40, 33]
+    }
+  };
+ 
+  chart.setOption(option);
+  return chart;
+}
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -11,21 +69,51 @@ Page({
     isCountDown: false,
     codeInput:"",
     emailInput:"",
-    peopleList: []
+    peopleList: [],
+    ec: {
+      onInit: initChart
+    },
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    //设置用户user
     wx.getStorage({
       key: "userInfo",
       success:(res)=> {
         this.setData({
           user: JSON.parse(res.data)
         })
-        console.log(this.data.user)
       }
     })
+    setTimeout(()=>{
+      console.log(this.data.user)
+      wx.request({
+        url: "http://192.168.50.32:10010/goodan-homepage/get-NumberOfDetections",
+        header:{
+          'Authorization':this.data.user.shortToken,
+          'Gateway':'GoodAn',
+          'content-type': 'application/json' // 默认值
+        },
+        data:{
+          "user_mail":this.data.user.userMail,
+          "days":7
+        },
+        method: 'GET',
+        success (res) {
+          console.log(res.data.data)
+          wx.getStorage({
+            key: "detectionList",
+            success:(res)=> {
+              this.setData({
+                user: JSON.parse(res.data.data)
+              })
+            }
+          })
+        }
+      }) 
+    },0)
   },
   //验证码输入框
   codeChange: function (e) {
@@ -177,8 +265,8 @@ Page({
       showModal:true
     })
   },
-   // 弹出层里面的弹窗
-   modalCancelClick:function () {
+  // 弹出层里面的弹窗
+  modalCancelClick:function () {
     this.setData({
       showModal:false
     })

@@ -3,7 +3,7 @@
   <view class="myBoxTop">
     <view class="myBoxTopDetail1">
     <!-- ../../static/img/abc.jpeg -->
-      <image style="width: 140rpx; margin-top: 5rpx; margin-right: 10rpx; border-radius: 100rpx;" mode="widthFix" src='{{user.avatar ? user.avatar : "../../static/img/abc.jpeg"}}'></image>
+      <image style="width: 140rpx; margin-top: 5rpx; margin-right: 10rpx; border-radius: 100rpx;" mode="widthFix" src='https://ts1.cn.mm.bing.net/th?id=OIP-C.HVdWPbF8w9RDzR_VFdskegAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2'></image>
     </view>
     <view class="myBoxTopDetail2">
       <view class="myBoxTopDetailName">{{user.userName}}</view>
@@ -17,7 +17,7 @@
         <view class="myAvatarBox">
           <view class="myBoxDetail1">头像</view>
           <view class="myBoxDetail2">
-            <image style="width: 60rpx; margin-top: 5rpx; margin-right: 10rpx; border-radius: 100rpx;" mode="widthFix" src='{{user.avatar ? user.avatar : "../../static/img/abc.jpeg"}}'></image>
+            <image style="width: 60rpx; margin-top: 5rpx; margin-right: 10rpx; border-radius: 100rpx;" mode="widthFix" src='https://ts1.cn.mm.bing.net/th?id=OIP-C.HVdWPbF8w9RDzR_VFdskegAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2'></image>
           </view>
           <view class="myBoxDetail3" bind:tap="avatarClick">修改 ></view>
         </view>
@@ -34,14 +34,9 @@
       </view>
     </view>
     <view class="myBoxRelateBottom">
-      <view class="myBoxBottomTitle2">关系绑定</view>
-      <view class="myBoxRelates">
-        <view class="myBoxRelate"  wx:key="item" wx:for="{{peopleList}}" bind:tap="toParent">
-          <view class="myBoxRelateUsername">{{item.parentAccount?item.parentAccount:item.account}}</view>
-          <view class="myBoxImage">
-            <image style="width: 60rpx; margin-top: 5rpx; margin-right: 10rpx; border-radius: 100rpx;" mode="widthFix" src='{{item.avatar ? item.avatar : "../../static/img/cat.jpeg"}}'></image>
-          </view>
-        </view>
+      <view class="myBoxBottomTitle2">检测数量</view>
+      <view class="box">  
+        <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
       </view>
     </view>
     <!-- 弹窗 -->

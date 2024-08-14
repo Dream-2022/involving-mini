@@ -18,7 +18,7 @@
 }
 .myBoxTopDetailName{
   font-size: 32rpx;
-  margin-top: 30rpx;
+  margin-top: 40rpx;
 }
 .myBoxTopDetailID{
   font-size: 24rpx;
@@ -38,9 +38,16 @@
 }
 .myBoxBottomTitle2{
   color: #476DF4;
+  font-size: 26rpx;
   margin-top: 75rpx;
   margin-bottom: 25rpx;
 }
+.box {
+  width:100%;
+  height:600rpx;
+  font-size: 42rpx;
+  font-weight: bold;
+} 
 .exitbottom{
   height: 80rpx;
 }
@@ -56,14 +63,13 @@
   padding-bottom: 0;
 }
 .myBoxDetail1{
-  flex: 2;
+  margin-right: 50rpx;
 }
 .myBoxDetail2{
-  flex: 6;
+  margin-right: auto;
 }
 .myBoxDetail3{
   color: rgb(155, 152, 152);
-  flex: 1.5;
 }
 .myBoxRelates{
   min-height: 160rpx;

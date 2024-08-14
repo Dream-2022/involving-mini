@@ -1,7 +1,7 @@
 <!--pages/main/main.wxml-->
 <view class="view">
   <view class="mainBox">
-    <image style="width: 100%; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/img/mainPage.png'></image>
+    <image style="width: 100%; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='https://springboottct.oss-cn-beijing.aliyuncs.com/img/xcx.png'></image>
     <view class="entranceBoxes">
       <view class="entranceBox">
         <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/3-t.png'></image>
@@ -33,7 +33,7 @@
         <view class="quickContentBox" wx:for="{{recentAnalysisList}}" wx:key="item" bindtap="recentClick" data-filemd5="{{item.fileMd5}}">
           <view class="quickTop">
             <view class="quickTopName">{{item.apkName}}</view>
-            <view class="quickTopType {{item.apkDesc=='安全'?'greenBox':(item.apkDesc=='涉黄'?'yellowBox':(item.apkDesc=='黑灰'?'grayBox':(item.apkDesc=='涉诈'?'redBox':'purpleBox')))}}">{{item.apkDesc}}</view>
+            <view class="quickTopType {{item.apkDesc=='正常'?'greenBox':(item.apkDesc=='色情'?'yellowBox':(item.apkDesc=='黑灰'?'grayBox':(item.apkDesc=='涉诈'?'redBox':'purpleBox')))}}">{{item.apkDesc}}</view>
             <view class="quickTopAPKName">{{item.fileName}}</view>
           </view>
           <view class="quickBottom">

@@ -1,0 +1,44 @@
+<view>
+  <view class="containerBox">
+    <view class="apkTitle">
+      <view>APK分析</view>
+    </view>
+    <view class="mainBox">
+      <view class="topTitle">
+        <view wx:for="{{tabs}}" wx:key="index" wx:for-item="tab" wx:for-index="index" class="{{activeTab === index ?  'titleActive' : 'topTitleContent'}}" data-index="{{index}}" bindtap="changeTab">
+          {{tab.label}}
+        </view>
+      </view>
+      <view class="contentArea">
+        <block wx:if="{{activeTab === 0}}">
+          <view>
+            <view class="fileUploadBox" bind:tap="fileUploadClick">
+              <image style="width: 120rpx; height: 50%;" mode="widthFix" class='loginPng' src='../../static/img/icon.png'></image>
+              <view class="fileUploadContent">点击上传APK文件</view>
+            </view>
+            <view class="fileUploadContent" style="margin-top: 15rpx;">支持上传 apk 文件 ( 上传文件越大 分析时间越长 )</view>
+          </view>
+          <view class="apkName" wx:if='{{chooseFileName}}'>
+            <image style="width: 38rpx;margin: 0 10rpx;" mode="widthFix" class='loginPng' src='../../static/img/file.png'></image>
+            <view>{{chooseFileName}}</view>
+            <view class="deleteFile" bind:tap="deleteFileClick">X</view>
+          </view>
+          <button class="vanButton" bind:tap="startAnalysisClick">开始静态分析</button>
+          <view class="fileUploadContent" style="margin-top: 15rpx; text-align: center;">非会员用户，进行静态分析消耗 20积分</view>
+          <view wx:if="{{isUpload!=0}}" class="waitWord">正在{{isUpload=='1'?'上传':'分析'}}，请耐心等待 ...</view>
+          <view wx:if="{{isUpload!=0}}">
+            <van-progress percentage="{{cProgress}}" pivot-text="{{cNumber}}/{{total}}" pivot-color="{{isUpload==1?'#1989fa':'#6ba243'}}" />
+          </view>
+        </block>
+        <block wx:if="{{activeTab === 1}}">
+          <!-- URL页面内容 -->
+          <view>这里是URL页面的内容</view>
+        </block>
+        <block wx:if="{{activeTab === 2}}">
+          <!-- MD5页面内容 -->
+          <view>这里是MD5页面的内容</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

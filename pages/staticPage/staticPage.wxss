@@ -1,0 +1,83 @@
+.containerBox{
+  background-color: #f2f6fe;
+  height: 100vh;
+}
+.apkTitle{
+  font-weight: 600;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  display: flex;
+  height: 240rpx;
+  justify-content: center;
+  align-items: center;
+}
+.mainBox{
+  width: 84%;
+  margin-left: 5%;
+  border-radius: 15rpx;
+  box-shadow: 2rpx 10rpx 50rpx 12rpx rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 10rpx 3%;
+  padding-bottom: 40rpx;
+}
+.topTitle{
+  border-bottom: 2rpx solid #ccc;
+  display: flex;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.topTitleContent{
+  width: 150rpx;
+  text-align: center;
+}
+.titleActive{
+  width: 150rpx;
+  text-align: center;
+  border-bottom: 5rpx solid #004ac5;
+}
+.contentArea{
+  padding: 30rpx 0;
+}
+.fileUploadBox{
+  height: 350rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 15rpx;
+  border: 2rpx solid #ccc;
+}
+.fileUploadContent{
+  font-size: 24rpx;
+  color: rgb(90, 90, 90);
+}
+.vanButton{
+  font-size: 28rpx;
+  width: 350rpx;
+  line-height: 70rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  background-color: #004ac5;
+  color: #fff;
+  margin-top: 60rpx;
+  border-radius: 10rpx;
+}
+.apkName{
+  display: flex;
+  font-size: 30rpx;
+  color: rgb(90, 90, 90);
+  margin-top: 15rpx;
+}
+.deleteFile{
+  font-size: 26rpx;
+  margin-top: 3rpx;
+  margin-right: 20rpx;
+  margin-left: auto;
+}
+.waitWord{
+  font-size: 24rpx;
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
