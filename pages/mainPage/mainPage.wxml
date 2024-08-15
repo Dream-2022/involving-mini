@@ -3,24 +3,24 @@
   <view class="mainBox">
     <image style="width: 100%; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='https://springboottct.oss-cn-beijing.aliyuncs.com/img/xcx.png'></image>
     <view class="entranceBoxes">
-      <view class="entranceBox">
-        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/3-t.png'></image>
+      <view class="entranceBox" bind:tap="recentMoreClick">
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='https://springboottct.oss-cn-beijing.aliyuncs.com/img/xcx4.png'></image>
         <view  class="entranceTitle">最近分析</view>
       </view>
       <view class="entranceBox">
-        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/private.png'></image>
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='https://springboottct.oss-cn-beijing.aliyuncs.com/img/xcx8.png'></image>
         <view  class="entranceTitle">我的分析</view>
       </view>
       <view class="entranceBox">
-        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/0-t.png'></image>
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='https://springboottct.oss-cn-beijing.aliyuncs.com/img/xcx5.png'></image>
         <view  class="entranceTitle">静态分析</view>
       </view>
       <view class="entranceBox">
-        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/book-search.png'></image>
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='https://springboottct.oss-cn-beijing.aliyuncs.com/img/xcx7.png'></image>
         <view  class="entranceTitle">黑白名单</view>
       </view>
       <view class="entranceBox">
-        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='../../static/tabar/2-t.png'></image>
+        <image class="entranceImg" style="width: 100rpx; border-radius: 20rpx;" mode="widthFix" class='loginPng' src='https://springboottct.oss-cn-beijing.aliyuncs.com/img/xcx3.png'></image>
         <view  class="entranceTitle">我的会员</view>
       </view>
     </view>
@@ -30,6 +30,10 @@
         <view class="quickMore" bindtap="recentMoreClick">更多 ></view>
       </view>
       <view class="quickContentBoxes">
+        <view wx:if="{{recentAnalysisList.length==0}}" style=" margin: 100rpx 0;">
+          <van-loading color="#004ac5" style="padding: 200rpx 50% 200rpx 45%;" />
+          <view style="color:#004ac5;text-align: center;">加载中...</view>
+        </view>
         <view class="quickContentBox" wx:for="{{recentAnalysisList}}" wx:key="item" bindtap="recentClick" data-filemd5="{{item.fileMd5}}">
           <view class="quickTop">
             <view class="quickTopName">{{item.apkName}}</view>
@@ -56,6 +60,10 @@
           <view class="templateMore" bind:tap="templateMoreClick">更多 ></view>
         </view>
         <view class="templateContentBoxes">
+          <view wx:if="{{templateList.length==0}}" style=" margin: 100rpx 0;">
+            <van-loading color="#004ac5" style="padding: 200rpx 50% 200rpx 45%;" />
+            <view style="color:#004ac5;text-align: center;">加载中...</view>
+          </view>
           <view class="templateContentBox" wx:for="{{templateList}}" wx:key="item">
             <view>{{item.essayTitle}}</view>
             <view class="templateBottom">

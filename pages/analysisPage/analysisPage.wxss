@@ -1,0 +1,85 @@
+
+.quickBox{
+  font-size: 28rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.quickTitleBox{
+  display: flex;
+  margin-top: 20rpx;
+}
+.quickTitle{
+  margin-right: auto;
+  font-weight: 600;
+  color: #065fed;
+  font-size: 32rpx;
+}
+.quickMore,.templateMore{
+  cursor: pointer;
+  margin-top: 7rpx;
+  font-weight: 100;
+  color: rgb(80, 80, 80);
+  font-size: 24rpx;
+}
+.quickContentBoxes,.templateContentBoxes{
+  margin-top: 15rpx;
+}
+.quickContentBox,.templateContentBox{
+  cursor: pointer;
+  padding-top: 30rpx;
+  padding-bottom: 25rpx;
+  border-radius: 15rpx;
+}
+.quickTop,.quickBottom{
+  display: flex;
+  flex-wrap: wrap;
+}
+.quickTopName,.quickTopAPKName{
+  max-width: 30%; /* 设置容器宽度 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 显示省略号 */
+}
+.quickTopAPKName{
+  max-width: 60%;
+}
+.quickBottom{
+  margin-top: 8rpx;
+}
+.quickBottomProgress{
+  margin-right: 80rpx;
+  margin-top: 20rpx;
+  width: 400rpx;
+  line-height: 20rpx;
+}
+.quickTopType{
+  font-size: 24rpx;
+  margin-right: auto;
+  margin-left: 20rpx;
+  padding: 1rpx 10rpx 5rpx 10rpx;
+  border-radius: 10rpx;
+  color: #fff;
+}
+.redBox{
+  background-color: #F56C6C;
+}
+.purpleBox{
+  background-color: #a372df;
+}
+.yellowBox{
+  background-color: #e6a23c;
+}
+.greenBox{
+  background-color: #7dc15b;
+}
+.grayBox{
+  background-color: #9a9a9a;
+}
+.progressClass{
+  width: 100rpx;
+}
+.quickBottomProgress{
+  flex: 2;
+}

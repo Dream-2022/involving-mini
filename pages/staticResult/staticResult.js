@@ -1,4 +1,4 @@
-// pages/staticPage/staticPage.js
+// pages/staticResult/staticResult.js
 Page({
 
   /**

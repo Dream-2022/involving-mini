@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username: '87247104',
+    username: '45978446',
     password: '123',
     user:[]
   },

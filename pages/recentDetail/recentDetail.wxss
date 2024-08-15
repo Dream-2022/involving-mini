@@ -1,0 +1,69 @@
+
+.quickBox,.templateBox{
+  font-size: 28rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.quickTitleBox,.templateTitleBox{
+  display: flex;
+}
+.quickTitle,.templateTitle{
+  margin-right: auto;
+  font-weight: 600;
+  color: #065fed;
+  font-size: 32rpx;
+}
+.quickMore,.templateMore{
+  cursor: pointer;
+  margin-top: 7rpx;
+  font-weight: 100;
+  color: rgb(80, 80, 80);
+  font-size: 24rpx;
+}
+.quickContentBoxes,.templateContentBoxes{
+  margin-top: 15rpx;
+}
+.quickContentBox,.templateContentBox{
+  cursor: pointer;
+  padding-top: 20rpx;
+  padding-bottom: 15rpx;
+  border-radius: 15rpx;
+}
+.quickTop,.quickBottom{
+  display: flex;
+  flex-wrap: wrap;
+}
+.quickBottom{
+  margin-top: 5rpx;
+}
+.quickBottomProgress{
+  margin-right: 80rpx;
+  margin-top: 20rpx;
+  width: 400rpx;
+  line-height: 20rpx;
+}
+.quickTopType{
+  font-size: 24rpx;
+  margin-right: auto;
+  margin-left: 20rpx;
+  padding: 1rpx 10rpx 5rpx 10rpx;
+  border-radius: 10rpx;
+  color: #fff;
+}
+.redBox{
+  background-color: #F56C6C;
+}
+.purpleBox{
+  background-color: #a372df;
+}
+.yellowBox{
+  background-color: #e6a23c;
+}
+.greenBox{
+  background-color: #7dc15b;
+}
+.grayBox{
+  background-color: #9a9a9a;
+}

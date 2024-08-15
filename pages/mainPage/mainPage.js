@@ -127,22 +127,6 @@ Page({
       key:"recentMd5",
       data:fileMd5
     })
-    // wx.request({
-    //   url: 'http://192.168.50.32:10010/apk-info/getApkInfo',
-    //   data:{
-    //     fileMd5
-    //   },
-    //   method: 'GET',
-    //   header: {
-    //     'Authorization':this.data.user.shortToken,
-    //     'Gateway':'GoodAn',
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success: (res) =>{
-    //     console.log(res.data.data)
-        
-    //   }
-    // })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

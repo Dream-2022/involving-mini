@@ -1,1 +1,27 @@
-<view>recentDetail</view>
+<view>
+  <view class="quickBox">
+      <view class="quickTitleBox">
+        <view class="quickTitle">最近分析记录</view>
+      </view>
+      <view class="quickContentBoxes">
+        <view class="quickContentBox" wx:for="{{recentAnalysisList}}" wx:key="item" bindtap="recentClick" data-filemd5="{{item.fileMd5}}">
+          <view class="quickTop">
+            <view class="quickTopName">{{item.apkName}}</view>
+            <view class="quickTopType {{item.apkDesc=='正常'?'greenBox':(item.apkDesc=='色情'?'yellowBox':(item.apkDesc=='黑灰'?'grayBox':(item.apkDesc=='涉诈'?'redBox':'purpleBox')))}}">{{item.apkDesc}}</view>
+            <view class="quickTopAPKName">{{item.fileName}}</view>
+          </view>
+          <view class="quickBottom">
+            <view class="quickBottomProgress">
+              <van-progress
+                class="progressClass"
+                percentage="{{item.secureScore}}"
+                pivot-color="{{item.colorCircle}}"
+                pivot-text="{{item.secureScore}}"
+                color="{{item.color}}"/>
+            </view>
+            <view class="quickBottomTime">{{item.detectedTime}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

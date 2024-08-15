@@ -7,6 +7,7 @@
     "pages/staticPage/staticPage",
     "pages/moreTemplate/moreTemplate",
     "pages/recentDetail/recentDetail",
+    "pages/staticResult/staticResult",
     "pages/logs/logs"
   ],
   "tabBar": {
@@ -49,6 +50,5 @@
     "navigationBarBackgroundColor": "#f2f6fe"
   },
   "componentFramework": "glass-easel",
-  "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "sitemapLocation": "sitemap.json"
 }

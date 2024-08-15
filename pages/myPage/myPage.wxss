@@ -99,6 +99,8 @@
   flex: 5;
 }
 .myBoxExitBox{
+  padding: 20rpx;
+  cursor: pointer;
   display: flex;
   justify-content: center;
 }

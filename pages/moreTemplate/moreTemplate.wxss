@@ -1,1 +1,74 @@
 /* pages/moreTemplate/moreTemplate.wxss */
+.quickBox,.templateBox{
+  font-size: 28rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.quickTitleBox,.templateTitleBox{
+  display: flex;
+}
+.quickTitle,.templateTitle{
+  margin-right: auto;
+  font-weight: 600;
+  color: #065fed;
+  font-size: 32rpx;
+}
+.quickMore,.templateMore{
+  cursor: pointer;
+  padding: 7rpx;
+  font-weight: 100;
+  color: rgb(80, 80, 80);
+  font-size: 24rpx;
+}
+.quickContentBoxes,.templateContentBoxes{
+  margin-top: 15rpx;
+}
+.quickContentBox,.templateContentBox{
+  cursor: pointer;
+  padding-top: 20rpx;
+  padding-bottom: 15rpx;
+  border-radius: 15rpx;
+}
+.quickTop,.quickBottom{
+  display: flex;
+  flex-wrap: wrap;
+}
+.quickBottom{
+  margin-top: 5rpx;
+}
+.quickBottomProgress{
+  margin-right: 80rpx;
+  margin-top: 20rpx;
+  width: 400rpx;
+  line-height: 20rpx;
+}
+.progressClass{
+  width: 100rpx;
+}
+.quickBottomProgress{
+  flex: 2;
+}
+
+.templateBottom{
+  margin-top: 10rpx;
+  display: flex;
+}
+.label1{
+  background-color: #547BF1;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.label2 {
+  margin-left: 5px;
+  background-color: #e6eaf2;
+  color: #547BF1;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.templateBottomAuthor{
+  margin-right: auto;
+  margin-left: 8px;
+}

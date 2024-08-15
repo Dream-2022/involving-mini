@@ -81,3 +81,21 @@
   margin-top: 60rpx;
   margin-bottom: 30rpx;
 }
+
+.imgBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputClass{
+  border: 2px solid rgb(144, 144, 144);
+  height: 60rpx;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  padding: 3rpx 10rpx;
+  transition: all 0.3s ease; /* 动画效果 */
+}
+.inputClass:active {
+  border-color: #575757; /* 点击时的边框颜色 */
+  box-shadow: 0 0 5px rgba(46, 46, 46, 0.5); 
+}

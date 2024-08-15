@@ -1,1 +1,16 @@
-<view>moreTemplate</view>
+<view class="templateBox">
+        <view class="templateTitleBox">
+          <view class="templateTitle">范本库</view>
+        </view>
+        <view class="templateContentBoxes">
+          <view class="templateContentBox" wx:for="{{templateList}}" wx:key="item">
+            <view>{{item.essayTitle}}</view>
+            <view class="templateBottom">
+              <view class="label1">{{item.label1}}</view>
+              <view class="label2" wx:if="{{item.label2!=undefined}}">{{item.label2?item.label2:''}}</view>
+              <view class="templateBottomAuthor">{{item.essayWriter}}</view>
+              <view>{{item.publicationTime}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
