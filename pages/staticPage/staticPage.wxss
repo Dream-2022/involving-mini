@@ -72,8 +72,9 @@
 }
 .deleteFile{
   font-size: 26rpx;
-  margin-top: 3rpx;
-  margin-right: 20rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+  padding-right: 20rpx;
   margin-left: auto;
 }
 .waitWord{

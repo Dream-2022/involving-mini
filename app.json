@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/staticPage/staticPage",
     "pages/login/login",
     "pages/mainPage/mainPage",
     "pages/myPage/myPage",
     "pages/analysisPage/analysisPage",
-    "pages/staticPage/staticPage",
     "pages/moreTemplate/moreTemplate",
     "pages/recentDetail/recentDetail",
     "pages/staticResult/staticResult",

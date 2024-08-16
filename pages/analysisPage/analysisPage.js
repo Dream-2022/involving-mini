@@ -35,7 +35,6 @@ Page({
             console.log(res.data.data.records)
             for(let i=0;i<res.data.data.records.length;i++){
               res.data.data.records[i].detectedTime=res.data.data.records[i].detectedTime.replace('T', ' ')
-              console.log(res.data.data.records[i].secureScore)
               if(res.data.data.records[i].secureScore<25){
                 res.data.data.records[i].color='linear-gradient(to right,#FFD4BD,#D6573E)'
                 res.data.data.records[i].colorCircle='#D6573E'
